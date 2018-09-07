@@ -2,9 +2,9 @@ package com.rtcab.refactoring.codingdojo.conditionals;
 
 public class ReplaceNestedConditionalWithGuardClause {
 
-    boolean dead;
-    boolean separated;
-    boolean retired;
+    boolean dead = false;
+    boolean separated = false;
+    boolean retired = false;
 
 
     public boolean isSeparated() {
