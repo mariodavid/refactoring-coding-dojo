@@ -1,15 +1,20 @@
 [![license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-[![Build Status](https://travis-ci.org/mariodavid/spock-introduction.svg?branch=master)](https://travis-ci.org/mariodavid/spock-introduction)
+[![Build Status](https://travis-ci.org/mariodavid/refactoring-coding-dojo.svg?branch=master)](https://travis-ci.org/mariodavid/refactoring-coding-dojo)
 
-# Spock introduction
+# Back to the roots - Refactoring Coding Dojo
 
-This is a example project which introduces you into the cool work of spock based testing.
+This repository contains all examples for the coding dojo for refactoring.
 
 
 
+### run the tests
+
+```
+./gradlew check
+```
 
 
 
 ## Credits
 
-The original copy of the Spock + Gradle + Spring Boot was used from [int128/spock-spring-boot-example](https://github.com/int128/spock-spring-boot-example)
+The examples are based on the wonderful Refactoring book by Martin Fowler
