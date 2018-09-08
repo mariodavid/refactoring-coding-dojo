@@ -1,5 +1,6 @@
-package com.rtcab.refactoring.codingdojo.step1_composing_methods.example1
+package de.diedavids.refactoring.codingdojo.step1_composing_methods.example1
 
+import de.diedavids.refactoring.codingdojo.step1_composing_methods.example1.Example11ReplaceMethodWithMethodObject
 import spock.lang.Specification
 
 class Example11ReplaceMethodWithMethodObjectSpec extends Specification {

@@ -1,6 +1,6 @@
-package com.rtcab.refactoring.codingdojo.step2_conditionals.example2
+package de.diedavids.refactoring.codingdojo.step2_conditionals.example2
 
-
+import de.diedavids.refactoring.codingdojo.step2_conditionals.example2.Example22ReplaceNestedConditionalWithGuardClause
 import spock.lang.Specification
 
 

@@ -1,6 +1,6 @@
-package com.rtcab.refactoring.codingdojo.step2_conditionals.example1
+package de.diedavids.refactoring.codingdojo.step2_conditionals.example1
 
-
+import de.diedavids.refactoring.codingdojo.step2_conditionals.example1.Example21DecomposeConditional
 import spock.lang.Specification
 
 import java.time.LocalDate

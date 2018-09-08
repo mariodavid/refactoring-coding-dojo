@@ -1,4 +1,4 @@
-package com.rtcab.refactoring.codingdojo.step2_conditionals.example2;
+package de.diedavids.refactoring.codingdojo.step2_conditionals.example2;
 
 public class Example22ReplaceNestedConditionalWithGuardClause {
 

@@ -1,4 +1,4 @@
-package com.rtcab.refactoring.codingdojo.step2_conditionals.example1;
+package de.diedavids.refactoring.codingdojo.step2_conditionals.example1;
 
 import java.time.LocalDate;
 

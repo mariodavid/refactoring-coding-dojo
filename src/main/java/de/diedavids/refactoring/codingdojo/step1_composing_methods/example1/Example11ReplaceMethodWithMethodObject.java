@@ -1,4 +1,4 @@
-package com.rtcab.refactoring.codingdojo.step1_composing_methods.example1;
+package de.diedavids.refactoring.codingdojo.step1_composing_methods.example1;
 
 public class Example11ReplaceMethodWithMethodObject {
 
