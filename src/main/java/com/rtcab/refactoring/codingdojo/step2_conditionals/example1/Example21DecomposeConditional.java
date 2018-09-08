@@ -1,8 +1,8 @@
-package com.rtcab.refactoring.codingdojo.step1_conditionals;
+package com.rtcab.refactoring.codingdojo.step2_conditionals.example1;
 
 import java.time.LocalDate;
 
-public class Example1DecomposeConditional {
+public class Example21DecomposeConditional {
 
 
     private static final LocalDate SUMMER_START = LocalDate.of(2018,6,21);

@@ -1,6 +1,6 @@
-package com.rtcab.refactoring.codingdojo.step1_conditionals;
+package com.rtcab.refactoring.codingdojo.step2_conditionals.example2;
 
-public class Example2ReplaceNestedConditionalWithGuardClause {
+public class Example22ReplaceNestedConditionalWithGuardClause {
 
     boolean dead = false;
     boolean separated = false;
