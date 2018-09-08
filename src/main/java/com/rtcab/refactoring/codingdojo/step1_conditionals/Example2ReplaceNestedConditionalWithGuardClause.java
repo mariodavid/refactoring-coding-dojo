@@ -1,6 +1,6 @@
-package com.rtcab.refactoring.codingdojo.conditionals;
+package com.rtcab.refactoring.codingdojo.step1_conditionals;
 
-public class ReplaceNestedConditionalWithGuardClause {
+public class Example2ReplaceNestedConditionalWithGuardClause {
 
     boolean dead = false;
     boolean separated = false;
@@ -32,7 +32,7 @@ public class ReplaceNestedConditionalWithGuardClause {
     }
 
 
-    double getPayAmount() {
+    public double getPayAmount() {
         double result;
         if (isDead()) {
             result = deadAmount();
@@ -50,7 +50,6 @@ public class ReplaceNestedConditionalWithGuardClause {
                 }
             }
         }
-
 
         return result;
     }
