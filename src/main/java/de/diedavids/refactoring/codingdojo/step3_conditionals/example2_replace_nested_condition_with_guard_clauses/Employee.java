@@ -1,6 +1,6 @@
-package de.diedavids.refactoring.codingdojo.step2_conditionals.example2;
+package de.diedavids.refactoring.codingdojo.step3_conditionals.example2_replace_nested_condition_with_guard_clauses;
 
-public class Example22ReplaceNestedConditionalWithGuardClause {
+public class Employee {
 
     boolean dead = false;
     boolean separated = false;

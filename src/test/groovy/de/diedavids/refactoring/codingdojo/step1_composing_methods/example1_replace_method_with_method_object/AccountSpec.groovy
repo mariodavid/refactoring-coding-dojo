@@ -1,14 +1,14 @@
-package de.diedavids.refactoring.codingdojo.step1_composing_methods.example1
+package de.diedavids.refactoring.codingdojo.step1_composing_methods.example1_replace_method_with_method_object
 
-import de.diedavids.refactoring.codingdojo.step1_composing_methods.example1.Example11ReplaceMethodWithMethodObject
+
 import spock.lang.Specification
 
-class Example11ReplaceMethodWithMethodObjectSpec extends Specification {
+class AccountSpec extends Specification {
 
-    Example11ReplaceMethodWithMethodObject sut
+    Account sut
 
     def setup() {
-        sut = new Example11ReplaceMethodWithMethodObject()
+        sut = new Account()
     }
 
     def "gamma returns 56956 for three items in 2018 for 4 input values"() {

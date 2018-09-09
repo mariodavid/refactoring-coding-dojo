@@ -1,17 +1,17 @@
-package de.diedavids.refactoring.codingdojo.step2_conditionals.example1
+package de.diedavids.refactoring.codingdojo.step3_conditionals.example1_decompose_conditional
 
-import de.diedavids.refactoring.codingdojo.step2_conditionals.example1.Example21DecomposeConditional
+
 import spock.lang.Specification
 
 import java.time.LocalDate
 
-class Example21DecomposeConditionalSpec extends Specification {
+class AccountSpec extends Specification {
 
-    Example21DecomposeConditional sut
+    Account sut
 
 
     def setup() {
-        sut = new Example21DecomposeConditional(
+        sut = new Account(
                 summerRate: 100,
                 winterRate: 200,
                 winterServiceCharge: 50
