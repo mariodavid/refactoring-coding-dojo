@@ -35,10 +35,6 @@ class TimesheetSpec extends Specification {
         sut.charge(employee, 5) == (50 * 5)
     }
 
-    protected Employee regularEmployee(int rate) {
-        new Employee(specialSkill: false, rate: rate)
-    }
-
     def "charge calculates 262.5 for 5 days with a rate of 50 EUR and a special skill"() {
         given:
         def employee = specialSkillEmployee(50)
@@ -47,9 +43,14 @@ class TimesheetSpec extends Specification {
         sut.charge(employee, 5) == (double) (50 * 5 * 1.05)
     }
 
-    protected Employee specialSkillEmployee(int rate) {
+    protected static Employee specialSkillEmployee(int rate) {
         new Employee(specialSkill: true, rate: rate)
     }
+
+    protected static Employee regularEmployee(int rate) {
+        new Employee(specialSkill: false, rate: rate)
+    }
+
 
 
 }
