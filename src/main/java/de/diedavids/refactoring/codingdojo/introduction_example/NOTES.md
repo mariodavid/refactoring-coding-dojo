@@ -104,7 +104,7 @@ After:
   }
 ```
 
-3. move method `Customer.amountFor` --> `Rental.getCharge`
+#### 3. move method `Customer.amountFor` --> `Rental.getCharge`
 
 Before:
 
@@ -165,7 +165,7 @@ public class Rental {
 }
 ```
 
-4. replace temp with query `double amount = rental.getCharge()`
+#### 4. replace temp with query `double amount = rental.getCharge()`
 
 
 Before:
@@ -209,29 +209,29 @@ class Customer {
 
 4.1 IDEA: inline variable: `double amount`
 
-5. extract method `getFrequentRenterPoints` move method to `Rental`
+#### 5. extract method `getFrequentRenterPoints` move method to `Rental`
 
-6. remove temp `totalAmount` with Query `getTotalAmount()`
+#### 6. remove temp `totalAmount` with Query `getTotalAmount()`
 6.1 split for loop into two for loops (one for `totalAmount, one for `result` & `frequentRenterPoints`) 
 6.2 extract method `getTotalAmount()`
 6.3 inline variable `totalAmount`
 
-7. remove temp `frequentRenterPoints` with Query `getFrequentRenterPoints()` 
+#### 7. remove temp `frequentRenterPoints` with Query `getFrequentRenterPoints()` 
 7.1 split for loop into two for loops (one for `result`, one for `frequentRenterPoints`) 
 7.2 extract method `getFrequentRenterPoints()`
 7.3 inline variable `frequentRenterPoints`
 
-8. replace type code with state / strategy: `Rental.getCharge()` --> `Movie.getCharge(int daysRented)`
+#### 8. replace type code with state / strategy: `Rental.getCharge()` --> `Movie.getCharge(int daysRented)`
 8.1 create variable of `getDaysRented()` into `daysRented = getDaysRented()`
 8.2 extract method (without `daysRented`): `getCharge(int daysRented)`
 8.3 move method `Rental.getCharge(int daysRented)` --> `Movie.getCharge(int daysRented)`
 
-9. replace type code with state / strategy: `Rental.getFrequentRenterPoints()` --> `Movie.getFrequentRenterPoints(int daysRented)`
+#### 9. replace type code with state / strategy: `Rental.getFrequentRenterPoints()` --> `Movie.getFrequentRenterPoints(int daysRented)`
 8.1 create variable of `getFrequentRenterPoints()` into `daysRented = getDaysRented()`
 8.2 extract method (without `daysRented`): `getFrequentRenterPoints(int daysRented)`
 8.3 move method `Rental.getFrequentRenterPoints(int daysRented)` --> `Movie.getFrequentRenterPoints(int daysRented)`
 
-9. replace conditional with polymorphism `Movie.getCharge` -->  `Price.getCharge`
+#### 9. replace conditional with polymorphism `Movie.getCharge` -->  `Price.getCharge`
 9.1 create Price class
 9.2 Movie constructor: use `setPriceCode`
 9.3 create classes `Price`, `RegularPrice`, `ChildrenPrice` and `NewReleasePrice`
@@ -259,11 +259,10 @@ public void setPriceCode(int priceCode) {
 9.7 delegate `Movie.getPriceCode()` to `price.getPriceCode()`
 9.8 remove field `priceCode` from `Movie`
 9.9 copy method `Movie.getCharge(int daysRented)` to `Price.getCharge(int daysRented)`
-
 9.10 override `getCharge(int daysRented)` in `RegularPrice`
 9.11 remove case for `Movie.REGULAR` in switch case of `Price.getCharge(int daysRented)`
-9.10 override `getCharge(int daysRented)` in `ChildrenPrice`
-9.11 remove case for `Movie.CHILDREN` in switch case of `Price.getCharge(int daysRented)`
-9.10 override `getCharge(int daysRented)` in `NewReleasePrice`
-9.11 remove case for `Movie.NEW_RELEASE` in switch case of `Price.getCharge(int daysRented)`
-9.12 make `Price.getCharge(int daysRented)` abstract
+9.12 override `getCharge(int daysRented)` in `ChildrenPrice`
+9.13 remove case for `Movie.CHILDREN` in switch case of `Price.getCharge(int daysRented)`
+9.14 override `getCharge(int daysRented)` in `NewReleasePrice`
+9.15 remove case for `Movie.NEW_RELEASE` in switch case of `Price.getCharge(int daysRented)`
+9.16 make `Price.getCharge(int daysRented)` abstract
