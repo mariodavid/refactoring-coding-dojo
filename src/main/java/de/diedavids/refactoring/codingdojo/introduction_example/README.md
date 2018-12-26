@@ -89,3 +89,5 @@ The following refactorings can be applied, to remove some of the problems of the
 4. replace temp with query
 5. replace type code with state / strategy
 6. replace conditional with polymorphism
+
+Detailed information about the execution of the refactorings can be found in `NOTES.md`
