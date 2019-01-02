@@ -7,23 +7,37 @@ public class Movie {
   public static final int NEW_RELEASE = 1;
 
   private String title;
-  private int priceCode;
+
+  Price price;
 
   public Movie(String title, int priceCode) {
     this.title = title;
-    this.priceCode = priceCode;
+    setPriceCode(priceCode);
   }
 
   public String getTitle() {
     return title;
   }
 
-  public int getPriceCode() {
-    return priceCode;
-  }
-
   public void setPriceCode(int priceCode) {
-    this.priceCode = priceCode;
+    switch (priceCode) {
+      case REGULAR:
+        price = new RegularPrice();
+        break;
+      case NEW_RELEASE:
+        price = new NewReleasePrice();
+        break;
+      case CHILDREN:
+        price = new ChildrenPrice();
+        break;
+    }
   }
 
+  int getFrequentRenterPoints(int daysRented) {
+    return price.getFrequentRenterPoints(daysRented);
+  }
+
+  public double getCharge(int daysRented) {
+    return price.getCharge(daysRented);
+  }
 }

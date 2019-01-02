@@ -21,43 +21,35 @@ public class Customer {
   }
 
   public String statement() {
-    double totalAmount = 0;
-    int frequentRenterPoints = 0;
-
     String result = "Rental record for " + getName() + "\n";
+
+
     for (Rental rental : rentals) {
-      double amount = 0;
-      switch (rental.getMovie().getPriceCode()) {
-        case Movie.REGULAR:
-          amount += 2;
-          if (rental.getDaysRented() > 2)
-            amount += (rental.getDaysRented() - 2) * 1.5;
-          break;
-        case Movie.NEW_RELEASE:
-          amount += rental.getDaysRented() * 3;
-          break;
-        case Movie.CHILDREN:
-          amount += 1.5;
-          if (rental.getDaysRented() > 3)
-            amount += (rental.getDaysRented() - 3) * 1.5;
-          break;
-      }
-
-      // add frequent renter points
-      frequentRenterPoints++;
-      // add bonus for a two day new release rental
-      if (rental.getMovie().getPriceCode() == Movie.NEW_RELEASE && rental.getDaysRented() > 1)
-        frequentRenterPoints++;
-
       // show figures for this rental
-      result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(amount) + "\n";
-
-      totalAmount += amount;
+      result += "\t" + rental.getMovie().getTitle() + "\t" + String.valueOf(rental.getCharge()) + "\n";
     }
 
-    result += "Amount owed is " + String.valueOf(totalAmount) + "\n";
-    result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points";
+    result += "Amount owed is " + String.valueOf(getTotalAmount()) + "\n";
+    result += "You earned " + String.valueOf(getFrequentRenterPoints()) + " frequent renter points";
 
     return result;
   }
+
+  private int getFrequentRenterPoints() {
+    int result = 0;
+
+    for (Rental rental : rentals) {
+      result += rental.getFrequentRenterPoints();
+    }
+    return result;
+  }
+
+  private double getTotalAmount() {
+    double result = 0;
+    for (Rental rental : rentals) {
+      result += rental.getCharge();
+    }
+    return result;
+  }
+
 }
