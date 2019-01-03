@@ -2,7 +2,7 @@
 
 The first example deals with the domain of Movie rental. The object model contains the classes `Movie`, `Rental` and `Customer`.
 
-`Customer` has a method called `statement` which prints out a overview on the customers amount owed as well as its rentings.
+`Customer` has a method called `statement` which prints out an overview on the customers amount owed as well as its rentings.
 
 The result of the method looks like this:
 
@@ -77,7 +77,9 @@ The code contains some problematic code smells according Chapter 3 of the Refact
 * Inappropriate Intimacy
 * Comment
 
-as well as some other downsides. E.g. it requires to introduce code duplication in case we want to render a HTML statement instead of an text based one.  
+### Feature request
+
+The feature request is to print an HTML based statement instead of a text based one. In order to achieve that the code needs to be refactored so that the overall code duplication will not increase dramatically.
 
 ### Possible refactorings
 
