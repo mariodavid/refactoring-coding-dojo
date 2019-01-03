@@ -12,4 +12,16 @@ public class AccountType {
         this.premium = premium;
     }
 
+    public double overdraftCharge(int daysOverdrawn) {
+        double result;
+        if (isPremium()) {
+            result = 10d;
+            if (daysOverdrawn > 7) {
+                result += (daysOverdrawn - 7) * 0.85;
+            }
+            return result;
+        }
+        return daysOverdrawn * 1.75d;
+    }
+
 }

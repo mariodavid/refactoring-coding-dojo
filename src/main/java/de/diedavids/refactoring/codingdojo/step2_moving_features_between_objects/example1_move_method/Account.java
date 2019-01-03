@@ -9,15 +9,8 @@ public class Account {
 
 
     double overdraftCharge() {
-        double result;
-        if (type.isPremium()) {
-            result = 10d;
-            if (daysOverdrawn > 7) {
-                result += (daysOverdrawn - 7) * 0.85;
-            }
-            return result;
-        }
-        return daysOverdrawn * 1.75d;
+        int daysOverdrawn = this.daysOverdrawn;
+        return type.overdraftCharge(daysOverdrawn);
     }
 
 
