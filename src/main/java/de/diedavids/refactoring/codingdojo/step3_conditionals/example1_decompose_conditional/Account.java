@@ -41,13 +41,25 @@ public class Account {
 
         double charge;
 
-        if (dateToCharge.isBefore(SUMMER_START) || dateToCharge.isAfter(SUMMER_END)) {
-            charge = quantity * winterRate + winterServiceCharge;
+        if (notSummer(dateToCharge)) {
+            charge = winterCharge(quantity);
         }
         else {
-            charge = quantity * summerRate;
+            charge = summerCharge(quantity);
         }
 
         return charge;
+    }
+
+    private double summerCharge(int quantity) {
+        return quantity * summerRate;
+    }
+
+    private double winterCharge(int quantity) {
+        return quantity * winterRate + winterServiceCharge;
+    }
+
+    private boolean notSummer(LocalDate dateToCharge) {
+        return dateToCharge.isBefore(SUMMER_START) || dateToCharge.isAfter(SUMMER_END);
     }
 }
