@@ -8,7 +8,6 @@ public class Timesheet {
         if (billable.hasSpecialSkill()) {
             return base * 1.05d;
         }
-
         return base;
     }
 }
