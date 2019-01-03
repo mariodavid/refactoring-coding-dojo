@@ -3,9 +3,9 @@ package de.diedavids.refactoring.codingdojo.step4_generalization.example1_extrac
 public class Timesheet {
 
 
-    public double charge(Billable billable, int days) {
-        int base = billable.getRate() * days;
-        if (billable.hasSpecialSkill()) {
+    public double charge(Employee employee, int days) {
+        int base = employee.getRate() * days;
+        if (employee.hasSpecialSkill()) {
             return base * 1.05d;
         }
 

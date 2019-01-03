@@ -1,6 +1,6 @@
 package de.diedavids.refactoring.codingdojo.step4_generalization.example1_extract_interface;
 
-public class Employee implements Billable {
+public class Employee {
 
 
     private int rate;
@@ -14,9 +14,5 @@ public class Employee implements Billable {
         return specialSkill;
     }
 
-
-    public void getDrunk() {
-        // ...
-    }
 
 }
